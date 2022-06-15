@@ -10,7 +10,7 @@
   <ul>
       <li><%=link_to "Show",book_path(book.id)%></li>
       <li><%=link_to "Edit",edit_book_path(book.id)%></li>
-      <li>Destroy</li>
+      <li><%=link_to "Destroy",destroy_book_path(book.id),method: :delete,"data-confirm"=>"Are you sure?"%></li>
       
   </ul>
 <%end%>
