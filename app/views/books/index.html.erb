@@ -1,19 +1,26 @@
 <h1>Books</h1>
-
+<main>
+  <div class="table-name">
+    <h4>Title</h4>
+    <h4>Body</h4>
+    <div class="space"></div>
+  </div>
 <%@books.each do |book|%>
+  <div class="title">
   <%=book.title%>
-  
+  </div>
+  <div class="body">
    <%=book.body%>
- 
+ </div>
 
 
-  <ul>
+  <ul class="show-edit-destroy">
       <li><%=link_to "Show",book_path(book.id)%></li>
       <li><%=link_to "Edit",edit_book_path(book.id)%></li>
       <li><%=link_to "Destroy",destroy_book_path(book.id),method: :delete,"data-confirm"=>"Are you sure?"%></li>
-      
   </ul>
 <%end%>
+</main>
 
 <h2>New book</h2>
 
