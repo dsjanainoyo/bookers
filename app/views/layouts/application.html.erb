@@ -2,12 +2,10 @@
 <html>
   <head>
     <title>Bookers</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="b/V+pA/RX+DDsBlZGJQCyGzJI4moVn95PW4HWcEgJ7MkdKCX0C8hfnWZBPvBeBtsOE5Q2/LWXj19SLTg6iQGwg==">
+    <link rel="stylesheet" media="all" href="/assets/stylesheets/application.css" data-turbolinks-track="reload">
+    <script src="/assets/application-114264dd93c8ff30e4335b71eed7949d66c4e7a8eb62e2de6284c046fe07104b.js" data-turbolinks-track="reload"></script>
   </head>
 
   <body>
@@ -22,6 +20,8 @@
     <div class="destroy-success">
       <%=flash[:destroy]%>
     </div>
+    
+    <p id="notice"></p>
    
 
     <%= yield %>
